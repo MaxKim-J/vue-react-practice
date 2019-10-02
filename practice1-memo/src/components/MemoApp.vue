@@ -29,6 +29,13 @@ export default {
 		};
 	},
 	methods: {
+		updateMemo(payload) {
+			const { id, content } = payload;
+			const targetIndex = this.memos.findIndex(v => v.id === id);
+			const targetMemo = this.memos[targetIndex];
+			this.memos.splice(targetIndex, 1, { targetMemo, content });
+			this.storeMemo();
+		},
 		deleteMemo(id) {
 			const targetIndex = this.memos.findIndex(v => v.id === id);
 			this.memos.splice(targetIndex, 1);
