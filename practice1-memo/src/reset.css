@@ -1,0 +1,27 @@
+body {
+  background-color: #ededed;
+}
+
+html,
+div,
+fieldset,
+form,
+body,
+h1,
+p,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  border: none;
+  resize: none;
+}
+
+li {
+  list-style: none;
+}
