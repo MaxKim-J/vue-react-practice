@@ -1,12 +1,19 @@
 <template>
 	<div class="app-header">
 		<h1>메모 에플리케이션</h1>
+		<div>{{ memoCount }}</div>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'AppHeader',
+	props: {
+		memoCount: {
+			type: Number,
+			default: 0,
+		},
+	},
 };
 </script>
 

@@ -49,6 +49,7 @@ export default {
 				// 요청 때린 후 memo에서도 삭제
 				this.memos.splice(targetIndex, 1);
 			});
+			this.$emit('change', this.memos.length);
 		},
 		addMemo(payload) {
 			// 에이피아이로 올려받은 데이터 post방식 전달
@@ -56,8 +57,7 @@ export default {
 				// 결과값 memos에 푸시
 				this.memo.push(res.data);
 			});
-			// 내부 데이터를 문자열로 변환하고, 로컬 스토리지에 저장함
-			this.storeMemo();
+			this.$emit('change', this.memos.length);
 		},
 		// api에서는 로컬 스토리지 사용하지 않음
 		// storeMemo() {
