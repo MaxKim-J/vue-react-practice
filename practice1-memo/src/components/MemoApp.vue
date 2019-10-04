@@ -55,7 +55,7 @@ export default {
 			// 에이피아이로 올려받은 데이터 post방식 전달
 			memoAPICore.post('/', payload).then(res => {
 				// 결과값 memos에 푸시
-				this.memo.push(res.data);
+				this.memos.push(res.data);
 			});
 			this.$emit('change', this.memos.length);
 		},
